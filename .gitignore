@@ -1,4 +1,4 @@
 node_modules
 
 # добавить файл .env в .gitignore
-echo ".env" >> .gitignore
+.env

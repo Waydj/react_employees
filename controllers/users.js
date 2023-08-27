@@ -87,8 +87,13 @@ const register = async (req, res) => {
   }
 };
 
+/**
+ * @route GET api/user/current
+ * @desc текущий пользователь
+ * @access private
+ * */
 const current = async (req, res) => {
-  res.send("current");
+  return res.status(200).json(req.user);
 };
 
 module.exports = {

@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { Card, Form, Row, Space, Typography } from "antd"
-import { Header } from "../../components/header"
 import { Layout } from "../../components/layout"
 import CustomInput from "../../components/custom-input"
 import PasswordInput from "../../components/password-input"
@@ -13,7 +12,7 @@ import { ErrorMessage } from "../../components/error-message"
 
 export const Login = () => {
   const navigate = useNavigate()
-  const [loginUser, loginUserResult] = useLoginMutation()
+  const [loginUser] = useLoginMutation()
   const [error, setError] = useState("")
 
   const login = async (data: UserData) => {
@@ -32,7 +31,6 @@ export const Login = () => {
 
   return (
     <Layout>
-      <Header />
       <Row align="middle" justify="center">
         <Card title="Войдите" style={{ width: "30rem" }}>
           <Form onFinish={login}>

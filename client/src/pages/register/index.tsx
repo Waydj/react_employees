@@ -1,5 +1,4 @@
 import { Card, Form, Row, Space, Typography } from "antd"
-import { Header } from "../../components/header"
 import { Layout } from "../../components/layout"
 import CustomInput from "../../components/custom-input"
 import PasswordInput from "../../components/password-input"
@@ -10,7 +9,6 @@ import { Paths } from "../../paths"
 export const Register = () => {
   return (
     <Layout>
-      <Header />
       <Row align="middle" justify="center">
         <Card title="Регистрация" style={{ width: "30rem" }}>
           <Form onFinish={() => {}}>

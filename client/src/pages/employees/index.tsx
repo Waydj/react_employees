@@ -34,6 +34,10 @@ export const Employees = () => {
   const user = useSelector(selectUser)
   const { data, isLoading } = useGetAllEmployeesQuery()
 
+  const goToAddUser = () => {
+    navigate(Paths.emloyeeAdd)
+  }
+
   useEffect(() => {
     if (!user) {
       navigate("/login")
@@ -44,7 +48,7 @@ export const Employees = () => {
     <Layout>
       <CustomButton
         type="primary"
-        onClick={() => {}}
+        onClick={goToAddUser}
         icon={<PlusCircleOutlined />}
       >
         Добавить

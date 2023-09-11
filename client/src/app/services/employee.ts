@@ -27,11 +27,11 @@ export const employeesApi = api.injectEndpoints({
         method: "POST",
       }),
     }),
-    addEmployee: builder.mutation<string, Employee>({
+    addEmployee: builder.mutation<Employee, Employee>({
       query: (employee) => ({
         url: "/employees/add",
         method: "POST",
-        data: employee,
+        body: employee,
       }),
     }),
   }),

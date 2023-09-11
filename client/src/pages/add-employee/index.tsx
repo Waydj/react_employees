@@ -16,6 +16,12 @@ export const AddEmployee = () => {
   const user = useSelector(selectUser)
   const [addEmployee] = useAddEmployeeMutation()
 
+  useEffect(() => {
+    if (!user) {
+      navigate("login")
+    }
+  }, [navigate, user])
+
   const handleAddEmployee = async (data: Employee) => {
     try {
       await addEmployee(data).unwrap()
@@ -30,12 +36,6 @@ export const AddEmployee = () => {
       }
     }
   }
-
-  useEffect(() => {
-    if (!user) {
-      navigate("login")
-    }
-  }, [navigate, user])
 
   return (
     <Layout>

@@ -13,6 +13,7 @@ import { AddEmployee } from "./pages/add-employee"
 import { Status } from "./pages/status"
 import "./index.css"
 import Employee from "./pages/employee"
+import { EditEmployee } from "./pages/edit-employee"
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: `${Paths.employee}/:id`,
     element: <Employee />,
+  },
+  {
+    path: `${Paths.employeeEdit}/:id`,
+    element: <EditEmployee />,
   },
 ])
 

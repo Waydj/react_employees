@@ -79,7 +79,7 @@ const edit = async (req, res) => {
       where: {
         id: id,
       },
-      data: body,
+      data: data,
     });
 
     res.status(200).json(employee);
